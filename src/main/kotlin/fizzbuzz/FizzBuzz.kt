@@ -5,7 +5,7 @@ class FizzBuzz(private val helper: FizzBuzzHelper, private val fetchNumbers: () 
     fun execute(): String {
         val input = fetchNumbers().map {
             when {
-                helper.isFizz(it) && helper.isBuzz(it) -> "FizzBuzz"
+                helper.isFizzBuzz(it) -> "FizzBuzz"
                 helper.isFizz(it) -> "Fizz"
                 helper.isBuzz(it) -> "Buzz"
                 else -> it

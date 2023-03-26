@@ -7,20 +7,20 @@ class FizzBuzzHelperTest {
 
 
     @Test
-    fun `isFizz Given number multiple of 3 Then return Fizz`() {
+    fun `isFizz Given number multiple of 3 Then return true`() {
         val helper = FizzBuzzHelper()
 
         val result = helper.isFizz(9)
 
-        assertEquals(expected = "Fizz", actual = result)
+        assertEquals(expected = true, actual = result)
     }
 
     @Test
-    fun `isFizz Given number non multiple of 3 Then return the number`() {
+    fun `isFizz Given number non multiple of 3 Then return false`() {
         val helper = FizzBuzzHelper()
 
         val result = helper.isFizz(8)
 
-        assertEquals(expected = "8", actual = result)
+        assertEquals(expected = false, actual = result)
     }
 }

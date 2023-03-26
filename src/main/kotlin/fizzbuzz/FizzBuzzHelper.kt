@@ -1,7 +1,5 @@
 package fizzbuzz
 
 class FizzBuzzHelper {
-    fun isFizz(i: Int): String {
-        return if(i%3 == 0) "Fizz" else "$i"
-    }
+    fun isFizz(i: Int): Boolean = i%3 == 0
 }

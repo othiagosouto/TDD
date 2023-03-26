@@ -5,13 +5,19 @@ class FizzBuzz(private val helper: FizzBuzzHelper, private val fetchNumbers: () 
     fun execute(): String {
         val input = fetchNumbers().map {
             when {
-                helper.isFizzBuzz(it) -> "FizzBuzz"
-                helper.isFizz(it) -> "Fizz"
-                helper.isBuzz(it) -> "Buzz"
+                helper.isFizzBuzz(it) -> FIZZ_BUZZ
+                helper.isFizz(it) -> FIZZ
+                helper.isBuzz(it) -> BUZZ
                 else -> it
             }
         }
 
         return input.joinToString("\n")
+    }
+
+    private companion object {
+        const val FIZZ = "Fizz"
+        const val BUZZ = "Buzz"
+        const val FIZZ_BUZZ = "$FIZZ$BUZZ"
     }
 }

@@ -1,9 +1,9 @@
 package fizzbuzz
 
-class FizzBuzz {
+class FizzBuzz(private val fetchNumbers: () -> List<Int>) {
 
     fun execute(): String {
-        val input = (1..100).map { if (it % 3 == 0) "Fizz" else it }
+        val input = fetchNumbers().map { if (it % 3 == 0) "Fizz" else it }
 
         return input.joinToString("\n")
     }

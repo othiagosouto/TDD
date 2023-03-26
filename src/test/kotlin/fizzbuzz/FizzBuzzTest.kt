@@ -8,11 +8,12 @@ import kotlin.test.assertEquals
 class FizzBuzzTest {
 
     @Test
-    fun `Given numbers from 1 to 100 Then Replace all multiple of 3 to Fizz`() {
-        val fizzBuzz = FizzBuzz()
-        val input =(1..100).map{ if (it%3==0) "Fizz" else it}.joinToString("\n")
+    fun `Given numbers from 1 to 5 Then Replace all multiple of 3 to Fizz`() {
+        val fizzBuzz = FizzBuzz { listOf(1, 2, 3, 4, 5) }
 
-        assertEquals(expected = input, fizzBuzz.execute())
+        val result = fizzBuzz.execute()
+
+        assertEquals(expected = "1\n2\nFizz\n4\n5", actual = result)
     }
 
 }

@@ -16,4 +16,13 @@ class FizzBuzzTest {
         assertEquals(expected = "1\n2\nFizz\n4\n5", actual = result)
     }
 
+    @Test
+    fun `Given numbers from 1 to 5 Then Replace all multiple of 5 to Buzz`() {
+        val fizzBuzz = FizzBuzz { listOf(1, 2, 3, 4, 5) }
+
+        val result = fizzBuzz.execute()
+
+        assertEquals(expected = "1\n2\n3\n4\nBuzz", actual = result)
+    }
+
 }

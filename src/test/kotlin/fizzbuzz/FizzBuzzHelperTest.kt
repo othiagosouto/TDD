@@ -32,4 +32,13 @@ class FizzBuzzHelperTest {
 
         assertEquals(expected = true, actual = result)
     }
+
+    @Test
+    fun `isBuzz Given number non multiple of 5 Then return false`() {
+        val helper = FizzBuzzHelper()
+
+        val result = helper.isBuzz(14)
+
+        assertEquals(expected = false, actual = result)
+    }
 }

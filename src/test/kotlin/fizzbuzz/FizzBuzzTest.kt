@@ -13,7 +13,7 @@ class FizzBuzzTest {
 
         val result = fizzBuzz.execute()
 
-        assertEquals(expected = "1\n2\nFizz\n4\n5", actual = result)
+        assertEquals(expected = "1\n2\nFizz\n4\nBuzz", actual = result)
     }
 
     @Test
@@ -22,7 +22,6 @@ class FizzBuzzTest {
 
         val result = fizzBuzz.execute()
 
-        assertEquals(expected = "1\n2\n3\n4\nBuzz", actual = result)
+        assertEquals(expected = "1\n2\nFizz\n4\nBuzz", actual = result)
     }
-
 }

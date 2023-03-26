@@ -14,4 +14,13 @@ class FizzBuzzHelperTest {
 
         assertEquals(expected = "Fizz", actual = result)
     }
+
+    @Test
+    fun `isFizz Given number non multiple of 3 Then return the number`() {
+        val helper = FizzBuzzHelper()
+
+        val result = helper.isFizz(8)
+
+        assertEquals(expected = "8", actual = result)
+    }
 }
